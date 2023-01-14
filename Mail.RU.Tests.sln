@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mail.RU.Tests", "Mail.RU.Tests\Mail.RU.Tests.csproj", "{2B0DC026-CD81-4C7E-8180-98AC0E30F07F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCommonLib", "TestCommonLib\TestCommonLib.csproj", "{BA069E40-9F5A-45EB-9800-27F7323AC3FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B0DC026-CD81-4C7E-8180-98AC0E30F07F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B0DC026-CD81-4C7E-8180-98AC0E30F07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B0DC026-CD81-4C7E-8180-98AC0E30F07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B0DC026-CD81-4C7E-8180-98AC0E30F07F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA069E40-9F5A-45EB-9800-27F7323AC3FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA069E40-9F5A-45EB-9800-27F7323AC3FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA069E40-9F5A-45EB-9800-27F7323AC3FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA069E40-9F5A-45EB-9800-27F7323AC3FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

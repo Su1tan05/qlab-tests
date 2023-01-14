@@ -1,0 +1,17 @@
+
+# ignore bin and obj folders
+/Mail.RU.Tests/bin/
+/Mail.RU.Tests/obj/
+
+/TestCommonLib/bin/
+/TestCommonLib/obj/
+
+/Mail.RU.Tests/TestResults/
+/TestCommonLib/TestResults/
+
+launch.json
+tasks.json
+Config.json
+TestData.json
+
+.vs
