@@ -1,18 +1,17 @@
 ﻿using Newtonsoft.Json;
 
-namespace TestCommonLib.DataProvider
+namespace TestCommonLib.DataProvider;
+
+public class ConfigDataProvider
 {
-    public class ConfigDataProvider
+    private static readonly string _nameOfJsonFile = "Config.json";
+
+    private static Config config; 
+
+    public static Config GetData()
     {
-        private static readonly string _nameOfJsonFile = "Config.json";
-
-        private static Config config; 
-
-        public static Config GetData()
-        {
-            string objectJsonFile = File.ReadAllText(_nameOfJsonFile);
-            config = JsonConvert.DeserializeObject<Config>(objectJsonFile);
-            return config;
-        }
+        string objectJsonFile = File.ReadAllText(_nameOfJsonFile);
+        config = JsonConvert.DeserializeObject<Config>(objectJsonFile);
+        return config;
     }
 }
