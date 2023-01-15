@@ -1,7 +1,11 @@
 
+using TestCommonLib.DataProvider;
+
 namespace Mail.RU.Tests.Models;
 
 public class TestData
 {
-    public string Url { get; set; }
+    public Users Users { get; set; }
+
+    public string BaseUrl { get; set; }
 }

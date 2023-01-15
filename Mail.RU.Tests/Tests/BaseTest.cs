@@ -3,20 +3,21 @@ using TestCommonLib.BrowserConfig;
 using Mail.RU.Tests.Models;
 using TestCommonLib.DataProvider;
 
-namespace Mail.RU.Tests.Base
+namespace Mail.RU.Tests.Tests
 {
     public class BaseTest
     {
+        protected TestData Data = TestDataProvider.GetData<TestData>("TestData.json");
+
         [TestInitialize]
-        public void Setup()
+        public void TestInitialize()
         {
-            var testUrl = TestDataProvider.GetData<TestData>("TestData.json").Url;
-            Browser.GoToUrl(testUrl);
+            Browser.GoToUrl(this.Data.BaseUrl);
+            Browser.GetDriver().Manage().Window.Maximize();
         }
 
-
         [TestCleanup]
-        public void DoAfterAllTest()
+        public void TestCleanup()
         {
             Browser.GetDriver().Quit();
         }

@@ -5,8 +5,8 @@ namespace TestCommonLib.Utils;
 
 public static class LogUtils
 {
-    private static readonly ILog log = LogManager.GetLogger(System.Reflection
-        .MethodBase.GetCurrentMethod().DeclaringType); 
+    private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase
+        .GetCurrentMethod().DeclaringType); 
 
     public static void Info(string message)
     {

@@ -11,6 +11,6 @@ public class Link : BaseElement
 
     public string Href()
     {
-        return Browser.GetDriver().FindElement(_locator)?.GetAttribute("href");
+        return Browser.GetDriver().FindElement(base.locator)?.GetAttribute("href");
     }
 }
