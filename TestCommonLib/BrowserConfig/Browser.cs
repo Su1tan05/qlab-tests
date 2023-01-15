@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using TestCommonLib.DataProvider;
 using TestCommonLib.Utils;
 
 namespace TestCommonLib.BrowserConfig;
@@ -12,7 +11,7 @@ public static class Browser
     {
         if (driver == null) 
         {
-            driver = BrowserFactory.GetBrowser(ConfigDataProvider.GetData().Browser);
+            driver = BrowserFactory.GetBrowser();
         }
         return driver;
     }

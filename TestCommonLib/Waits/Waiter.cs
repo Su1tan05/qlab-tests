@@ -1,14 +1,14 @@
 ﻿using OpenQA.Selenium.Support.UI;
 using TestCommonLib.BrowserConfig;
 using TestCommonLib.Utils;
-using TestCommonLib.DataProvider;
 using OpenQA.Selenium;
+using TestCommonLib.DataProvider;
 
 namespace TestCommonLib.Waits
 {
     public class Waiter
     {
-        private readonly static WebDriverWait wait = new WebDriverWait(Browser.GetDriver(), new TimeSpan(0, ConfigDataProvider.GetData().ExplWaitOnMinutes, 0));
+        private readonly static WebDriverWait wait = new WebDriverWait(Browser.GetDriver(), TestDataProvider.BrowserSettings.ExplicitWaitTimeout);
 
         public static void WaitVisibilityOfElementLocated(By locator)
         {

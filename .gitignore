@@ -11,7 +11,7 @@
 
 launch.json
 tasks.json
-Config.json
+BrowserSettings.json
 TestData.json
 
 .vs

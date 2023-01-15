@@ -1,12 +1,10 @@
 ﻿namespace TestCommonLib.DataProvider;
 
-public class Config
+public class BrowserSettings
 {
-    public string TestUrl { get; set; }
-
     public string Browser { get; set; }
 
     public string BrowserLanguage { get; set; }
 
-    public int ExplWaitOnMinutes { get; set; }
+    public TimeSpan ExplicitWaitTimeout{ get; set; }
 }

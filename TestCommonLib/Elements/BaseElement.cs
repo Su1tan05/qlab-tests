@@ -7,6 +7,7 @@ namespace TestCommonLib.Elements;
 public abstract class BaseElement
 {
     protected By _locator;
+    
     private readonly string _nameOfElement; 
 
     public BaseElement(By locator,string nameOfElement)

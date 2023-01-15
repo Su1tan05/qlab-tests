@@ -1,23 +1,20 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TestCommonLib.DataProvider;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using TestCommonLib.Utils;
+using TestCommonLib.DataProvider;
 
 namespace TestCommonLib.BrowserConfig;
 
 public static class BrowserFactory
 {
-    public static IWebDriver GetBrowser(string browserName)
+    public static IWebDriver GetBrowser()
     {
-        browserName = browserName.ToLower();
-        string browserLanguage = ConfigDataProvider.GetData().BrowserLanguage;
+        
+        var browserName = TestDataProvider.BrowserSettings.Browser.ToLower();
+        var browserLanguage = TestDataProvider.BrowserSettings.BrowserLanguage;
         switch (browserName)
         {
             case "chrome":

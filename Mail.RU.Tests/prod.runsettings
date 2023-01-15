@@ -2,5 +2,8 @@
 <RunSettings>
     <TestRunParameters>
         <Parameter name="url" value="https://mail.ru" />
+        <Parameter name="browser" value="chrome" />
+        <Parameter name="language" value="10" />
+        <Parameter name="explicitWaitTimeout" value="00:00:30" />
     </TestRunParameters>
 </RunSettings>

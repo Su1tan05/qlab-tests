@@ -9,13 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Config.json" />
+    <None Remove="BrowserSettings.json" />
     <None Remove="TestData.json" />
     <None Remove="prod.runsettings" /> 
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Config.json">
+    <EmbeddedResource Include="BrowserSettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="TestData.json">
