@@ -1,8 +1,8 @@
 
 namespace Mail.RU.Tests.Models;
 
-public class CommonUser
+public class DefaultUser
 {
-    public string Login { get; set; }
+    public string Username { get; set; }
     public string Password { get; set; }
 }

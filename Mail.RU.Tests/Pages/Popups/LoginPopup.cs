@@ -1,11 +1,13 @@
-using TestCommonLib.Pages;
 using OpenQA.Selenium;
 using TestCommonLib.Elements;
 using TestCommonLib.BrowserConfig;
+using Mail.RU.Tests.Enums;
+using Mail.RU.Tests.Models;
+using TestCommonLib.DataProvider;
 
 namespace Mail.RU.Tests.Pages.Popups;
 
-public class LoginPopup : MailRuHomePage
+public class LoginPopup
 {
     public LoginPopup()
     {
@@ -23,14 +25,45 @@ public class LoginPopup : MailRuHomePage
 
     private IWebElement PopupFrame = Browser.GetDriver().FindElement(By.XPath("//iframe[contains(@class,'popup')]"));
 
-    public void Login(string login, string password)
+    private TestData TestData = TestDataProvider.GetData<TestData>("TestData.json");
+
+    public InboxMailsPage AuthorizeUser(string username, string password)
     {
         Browser.GetDriver().SwitchTo().Frame(PopupFrame);
-        Spinner.WaitElementDisappear();
-        UserNameTextBox.SendKeys(login);
-        NextButton.ClickAndWait(SubmitButton.GetLocator());
-        PasswordTextBox.SendKeys(password);
-        SubmitButton.Click();
+        this.inputUserName(username);
+        this.ClickNextButton();
+        this.inputPassword(password);
+        this.ClickSubmitButton();
         Browser.GetDriver().SwitchTo().DefaultContent();
+        return new InboxMailsPage();
     }
+
+    public InboxMailsPage AuthorizeUser(User user) => user switch
+    {
+        User.DefaultUser => this.AuthorizeUser(TestData.Users.DefaultUser.Username, 
+                                                TestData.Users.DefaultUser.Password),
+        _ => throw new Exception("User is not defined")
+    };
+
+    public void inputUserName(string username)
+    {
+        Spinner.WaitElementDisappear();
+        UserNameTextBox.SendKeys(username);
+    }
+
+    public void inputPassword(string password)
+    {
+        PasswordTextBox.SendKeys(password);
+    }
+
+    public void ClickNextButton()
+    {
+        NextButton.ClickAndWait(SubmitButton.GetLocator());
+    }
+
+    public void ClickSubmitButton()
+    {
+        SubmitButton.Click();
+    }
+
 }

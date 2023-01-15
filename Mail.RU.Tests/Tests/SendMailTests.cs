@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Mail.RU.Tests.Pages;
 using Mail.RU.Tests.Enums;
 
 namespace Mail.RU.Tests.Tests
@@ -8,10 +7,11 @@ namespace Mail.RU.Tests.Tests
     public class SendMailTests : BaseTest
     {
         [TestMethod]
-        [Description("Can Send Mail")]
         public void CanSendMail()
         {
-            new MailRuHomePage().Login(User.CommonUser);
+            var inboxPage = base.OpenInboxPage(User.DefaultUser);
+            inboxPage.WriteMail().Send($"sultan_tadjibov@mail.ru", "Test mail", "EEEE Можно спать!!!\n\n Test mail body");
+
             Assert.IsTrue(true);
         }
     }

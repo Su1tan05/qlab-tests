@@ -2,6 +2,8 @@
 using TestCommonLib.BrowserConfig;
 using Mail.RU.Tests.Models;
 using TestCommonLib.DataProvider;
+using Mail.RU.Tests.Enums;
+using Mail.RU.Tests.Pages;
 
 namespace Mail.RU.Tests.Tests
 {
@@ -21,5 +23,8 @@ namespace Mail.RU.Tests.Tests
         {
             Browser.GetDriver().Quit();
         }
+
+        protected InboxMailsPage OpenInboxPage(User user) =>
+            new MailRuHomePage().LoginPopup().AuthorizeUser(user);
     }
 }
