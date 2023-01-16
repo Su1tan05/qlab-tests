@@ -10,7 +10,6 @@ public abstract class BasePage
 
     protected string PageName{ get; set;}
 
-
     protected BasePage(By pageLocator, string pageName)
     {
         PageLocator = pageLocator;

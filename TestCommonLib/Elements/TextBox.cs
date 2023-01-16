@@ -24,4 +24,10 @@ public class TextBox: BaseElement
         }
         action.KeyUp(Keys.LeftShift).Build().Perform();
     }
+
+    public void Clear()
+    {
+        LogUtils.Info($"Clear text");
+        Browser.GetDriver().FindElement(base.locator).Clear();
+    }
 }

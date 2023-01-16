@@ -1,7 +1,6 @@
 ﻿using OpenQA.Selenium;
 using TestCommonLib.Utils;
 using TestCommonLib.BrowserConfig;
-using System.Data;
 
 namespace TestCommonLib.Elements;
 

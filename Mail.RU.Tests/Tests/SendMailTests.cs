@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Mail.RU.Tests.Enums;
+using Mail.RU.Tests.Models;
+using TestCommonLib.Utils.RandomUtils;
 
 namespace Mail.RU.Tests.Tests
 {
@@ -10,9 +12,13 @@ namespace Mail.RU.Tests.Tests
         public void CanSendMail()
         {
             var inboxPage = base.OpenInboxPage(User.DefaultUser);
-            inboxPage.WriteMail().Send($"sultan_tadjibov@mail.ru", "Test mail", "EEEE Можно спать!!!\n\n Test mail body");
+            var mailData = new MailData(){
+                To = "sultan_tadjibov@mail.ru",
+                Subject = $"Test task: {RandomUtils.GenerateRandomString(10)}",
+                Body = $"Github: https://github.com/Su1tan05/qlab-tests \n\n{RandomUtils.GenerateRandomString(100)}"
+            };
 
-            Assert.IsTrue(true);
+            Assert.AreEqual(inboxPage.WriteMail().Send(mailData).GetInfo(), "Письмо отправлено");
         }
     }
 }

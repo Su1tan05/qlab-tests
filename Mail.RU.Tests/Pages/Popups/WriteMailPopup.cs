@@ -7,9 +7,6 @@ namespace Mail.RU.Tests.Pages.Popups;
 
 public class WriteMailPopup : BasePage
 {
-
-    // totextbox locator
-
     public static readonly By ToTextBoxLocator = By.XPath(".//div[@data-type='to']//input");
 
     public WriteMailPopup() : base(ToTextBoxLocator, "Write mail popup")
@@ -32,11 +29,12 @@ public class WriteMailPopup : BasePage
         this.ClickSendButton();
     }
 
-    public void Send(MailData mailData)
+    public SendMailPopup Send(MailData mailData)
     {
         this.Send(mailData.To, mailData.Subject, mailData.Body);
+        return new SendMailPopup();
     }
-    
+
     public void InputRecipient(string recipient)
     {
         this.ToTextBox.SendKeys(recipient);
@@ -49,6 +47,7 @@ public class WriteMailPopup : BasePage
 
     public void InputMailBody(string mailBody)
     {
+        this.MailBodyTextBox.Clear();
         this.MailBodyTextBox.SendKeys(mailBody);
     }
 
