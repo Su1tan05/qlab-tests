@@ -13,7 +13,7 @@ namespace Mail.RU.Tests.Tests
         {
             var inboxPage = base.OpenInboxPage(User.DefaultUser);
             var mailData = new MailData(){
-                To = "sultan_tadjibov@mail.ru",
+                To = "s.mosaleva@quality-lab.ru",
                 Subject = $"Test task: {RandomUtils.GenerateRandomString(10)}",
                 Body = $"Github: https://github.com/Su1tan05/qlab-tests \n\n{RandomUtils.GenerateRandomString(100)}"
             };

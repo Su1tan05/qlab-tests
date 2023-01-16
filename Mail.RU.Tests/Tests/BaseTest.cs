@@ -14,8 +14,8 @@ namespace Mail.RU.Tests.Tests
         [TestInitialize]
         public void TestInitialize()
         {
+            Browser.MaximizeWindow();
             Browser.GoToUrl(this.Data.BaseUrl);
-            Browser.GetDriver().Manage().Window.Maximize();
         }
 
         [TestCleanup]

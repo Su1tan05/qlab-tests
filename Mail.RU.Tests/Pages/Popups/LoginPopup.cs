@@ -9,10 +9,6 @@ namespace Mail.RU.Tests.Pages.Popups;
 
 public class LoginPopup
 {
-    public LoginPopup()
-    {
-    }
-
     private Spinner Spinner => new Spinner(By.XPath(".//div[@class='ag-popup__frame__layout__loader']"), "Login pupup spinner"); 
 
     private TextBox UserNameTextBox => new TextBox(By.XPath(".//input[@name='username']"), "UserName TextBox"); 

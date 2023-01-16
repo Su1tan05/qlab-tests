@@ -1,6 +1,4 @@
-using System.Data;
 using Mail.RU.Tests.Pages.Popups;
-using Microsoft.VisualBasic;
 using OpenQA.Selenium;
 using TestCommonLib.BrowserConfig;
 using TestCommonLib.Elements;
@@ -23,12 +21,10 @@ public class InboxMailsPage : BasePage
         this.ClosePromoTabs();
         this.WriteMailButton.Click();
         return new WriteMailPopup();
-        //div[@data-click-counter='123583583']
     }
 
     public void ClosePromoTabs()
     {
-        // close all promo tabs
         var promoTabs = Browser.GetDriver().FindElements(By.XPath(".//div[@data-click-counter]"));
         foreach (var promoTab in promoTabs)
         {

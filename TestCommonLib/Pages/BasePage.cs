@@ -1,5 +1,4 @@
 using OpenQA.Selenium;
-using TestCommonLib.BrowserConfig;
 using TestCommonLib.Waits;
 
 namespace TestCommonLib.Pages;

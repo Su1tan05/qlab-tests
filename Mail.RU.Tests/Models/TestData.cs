@@ -1,4 +1,3 @@
-
 namespace Mail.RU.Tests.Models;
 
 public class TestData

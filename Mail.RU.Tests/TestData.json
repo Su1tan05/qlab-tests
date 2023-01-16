@@ -1,0 +1,12 @@
+{
+  "BaseUrl": "https://www.mail.ru",
+
+  "Users":
+  {
+    "DefaultUser":
+    {
+      "Username": "",
+      "Password": ""
+    }
+  }
+}

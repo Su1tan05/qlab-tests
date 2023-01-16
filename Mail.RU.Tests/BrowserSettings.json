@@ -1,0 +1,5 @@
+{
+  "Browser": "Chrome",
+  "BrowserLanguage": "--lang=ru",
+  "ExplicitWaitTimeout": "00:00:30"
+}
